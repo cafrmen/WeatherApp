@@ -80,6 +80,10 @@ a:hover {
   color: #fad7a0;
 }
 
+.temperatureSet {
+  margin-bottom: 20px;
+}
+
 footer {
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
