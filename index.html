@@ -10,11 +10,71 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Clima</h1>
+      <div class="card">
+        <form>
+          <input type="text" placeholder=" Search a city..." />
+          <input type="submit" value="Search" />
+          <button>Current location</button>
+        </form>
+
+        <ul>
+          <li>
+            <h2>Mexico City, MX.</h2>
+          </li>
+          <li>
+            <h4>Saturday 18:00</h4>
+          </li>
+          <li>
+            <h5>Cloudy</h5>
+          </li>
+        </ul>
+
+        <div>
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            alt="icon"
+          />
+          <span class="degrees">18</span>
+          <small class="typeDegrees">
+            <a href="#">°C</a> | <a href="#"> °F </a>
+          </small>
+        </div>
+
+        <div class="row">
+          <div class="col">Humidity</div>
+          <div class="col">Wind</div>
+        </div>
+
+        <footer>
+          <small>
+            Photo by
+            <a
+              href="https://unsplash.com/@leyameera?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+              >Tina Dawson</a
+            >
+            on
+            <a
+              href="https://unsplash.com/s/photos/texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+              >Unsplash</a
+            >
+            <br />
+            <a href="https://github.com/cafrmen/WeatherApp">Open source</a>
+            by Caf. Hosted at
+            <a href="https://xenodochial-fermi-222350.netlify.app">Netlify.</a>
+          </small>
+        </footer>
+      </div>
     </div>
 
     <script src="src/app.js"></script>

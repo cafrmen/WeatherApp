@@ -1,3 +1,88 @@
-h1 {
-  color: turquoise;
+body {
+  color: azure;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+}
+
+.card {
+  background-image: url(https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+  margin: 20px 160px;
+}
+
+form {
+  text-align: right;
+  color: #154360;
+  padding: 10px 30px;
+}
+
+input {
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 0;
+  color: #154360;
+  background-color: white;
+  border-color: #ecf0f1;
+  transition: 300ms ease-in-out;
+}
+
+input:hover {
+  background-color: #eafaf1;
+}
+
+button {
+  display: inline;
+  margin: 0 auto;
+  padding: 6px;
+  font-size: small;
+  border-radius: 30px;
+  border: 0;
+  color: #154360;
+  background-color: white;
+  border-color: #ecf0f1;
+  transition: 300ms ease-in-out;
+}
+
+button:hover {
+  background-color: #eafaf1;
+}
+
+li {
+  text-align: left;
+  list-style: none;
+  left: 0;
+}
+
+h2,
+h4 {
+  margin-bottom: 0;
+}
+
+.degrees {
+  position: relative;
+  top: 4px;
+  font-size: 36px;
+}
+
+.typeDegrees {
+  position: relative;
+  top: -11px;
+}
+
+a {
+  color: #f9e79f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fad7a0;
+}
+
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding-top: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 25px;
 }
