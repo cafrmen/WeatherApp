@@ -33,19 +33,18 @@ input:hover {
 
 button {
   display: inline;
-  margin: 0 auto;
-  padding: 6px;
+  margin-top: 10px;
   font-size: small;
   border-radius: 30px;
   border: 0;
   color: #154360;
-  background-color: white;
+  background-color: #eafaf1;
   border-color: #ecf0f1;
   transition: 300ms ease-in-out;
 }
 
 button:hover {
-  background-color: #eafaf1;
+  background-color: white;
 }
 
 li {
