@@ -2,7 +2,6 @@ body {
   color: azure;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
-  text-transform: capitalize;
   background-image: url(https://images.unsplash.com/photo-1606228216686-2025daa6c356?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1867&q=80);
 }
 
@@ -35,7 +34,7 @@ input:hover {
 
 button {
   display: inline;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: small;
   border-radius: 30px;
   border: 0;
@@ -55,9 +54,22 @@ li {
   left: 0;
 }
 
-h2,
+h2 {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.countrid {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
 h4 {
   margin-bottom: 0;
+}
+
+h5 {
+  text-transform: capitalize;
 }
 
 .degrees {

@@ -24,8 +24,8 @@
   <body>
     <div class="container">
       <div class="card">
-        <form id=searchCity>
-          <input type="text" id="typeCity" placeholder=" Type a city..." />
+        <form>
+          <input type="text" placeholder=" Type a city..." />
           <input type="submit" value="Search" />
         </br>
           <button>Current location</button>
@@ -33,13 +33,13 @@
 
         <ul>
           <li>
-            <h2>Mexico City, MX.</h2>
+            <h2 id="city"></h2> <span class="countrid" id="country"></span>
           </li>
           <li>
-            <h4>Saturday 18:00</h4>
+            <h4></h4>
           </li>
           <li>
-            <h5 id="description">Cloudy</h5>
+            <h5></h5>
           </li>
         </ul>
 
@@ -48,7 +48,7 @@
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="icon"
           />
-          <span class="degrees" id="currentTemperature">18</span>
+          <span class="degrees" id="temperature"></span>
           <small class="typeDegrees">
             <a href="#">°C</a> | <a href="#"> °F </a>
           </small>
@@ -56,9 +56,11 @@
 
         <div class="row">
           <div class="col">
-            <p id="humidity"> Humidity</p>
+             Humidity: <span id="humidity"></span>%
           </div>
-          <div class="col" id="windSpeed">Wind</div>
+          <div class="col">
+            Wind: <span id="windSpeed"></span> km/h
+          </div>
         </div>
 
         <footer>
