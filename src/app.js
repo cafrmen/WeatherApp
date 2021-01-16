@@ -14,14 +14,18 @@ function formatDate(timestamp) {
 
 //Shows the actual weather data of the default city
 function showTemperature(response) {
-    let city = document.querySelector("#city");
-    city.innerHTML = response.data.name;
-
-    let country = document.querySelector("#country");
-    country.innerHTML = response.data.sys.country;
-
+  //console.log(response.data);
+    let city = response.data.name;
+    let country = response.data.sys.country;
+    let cityCountry = document.querySelector("h2");
+    cityCountry.innerHTML = `${city}, ${country}.`;
+    
     let description = document.querySelector("h5");
     description.innerHTML = response.data.weather[0].description;
+  
+    let icon = document.querySelector("#img");
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    icon.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
 
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = Math.round(response.data.main.temp);
@@ -39,7 +43,7 @@ function showTemperature(response) {
 
 let apiKey = "a899961427dc9d3ac320aeea78474c0d";
 let units = "metric";
-let city = "Pachuca"
+let city = "Mexico City"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 
 axios.get(apiUrl).then(showTemperature);
