@@ -40,10 +40,23 @@ function showTemperature(response) {
     date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
+//Searching engine
 
-let apiKey = "a899961427dc9d3ac320aeea78474c0d";
+function search(city) {
+  let apiKey = "a899961427dc9d3ac320aeea78474c0d";
 let units = "metric";
-let city = "Mexico City"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 
 axios.get(apiUrl).then(showTemperature);
+}
+
+function searchInput(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#cityInput");
+  search(cityInput.value);
+}
+
+search("Mexico City");
+
+let form = document.querySelector("#searchEngine");
+form.addEventListener("submit", searchInput);
