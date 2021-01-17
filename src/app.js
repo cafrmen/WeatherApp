@@ -59,48 +59,48 @@ function showForecast(response) {
   console.log(forecastData);
   forecast.innerHTML =
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
   
   forecastData = response.data.list[1];
   forecast.innerHTML =
   forecast.innerHTML +
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
   
    forecastData = response.data.list[2];
   forecast.innerHTML =
   forecast.innerHTML +
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
   
   forecastData = response.data.list[3];
   forecast.innerHTML =
   forecast.innerHTML +
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
   
   forecastData = response.data.list[4];
   forecast.innerHTML =
   forecast.innerHTML +
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
   
   forecastData = response.data.list[5];
   forecast.innerHTML =
   forecast.innerHTML +
     `<div class="col-2">
-            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
           </div>`;
 }
 
