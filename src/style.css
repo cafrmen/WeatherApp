@@ -95,6 +95,18 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.hour {
+  margin-bottom: 0;
+  margin-top: 18px;
+  font-size: 11px;
+}
+
+.forecastIcon {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 90%;
+}
+
 footer {
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;

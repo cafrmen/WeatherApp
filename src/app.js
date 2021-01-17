@@ -1,15 +1,25 @@
 //Shows the actual time
 function formatDate(timestamp) {
     let date = new Date(timestamp);
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-      if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
     
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let day = days[date.getDay()];
-    return `Last update, ${day} ${hours}:${minutes}`
+  return `Last update, ${day} ${formatHours(timestamp)}`;
+}
+
+//Show forecast time
+function formatHours(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    
+    return `${hours}:${minutes}`;
 }
 
 //Shows the actual weather data of the default city
@@ -42,14 +52,68 @@ function showTemperature(response) {
     date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
-//Searching engine
+//Forecast searching engine
+function showForecast(response) {
+  let forecast = document.querySelector("#forecast");
+  let forecastData = response.data.list[0]
+  console.log(forecastData);
+  forecast.innerHTML =
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+  
+  forecastData = response.data.list[1];
+  forecast.innerHTML =
+  forecast.innerHTML +
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+  
+   forecastData = response.data.list[2];
+  forecast.innerHTML =
+  forecast.innerHTML +
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+  
+  forecastData = response.data.list[3];
+  forecast.innerHTML =
+  forecast.innerHTML +
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+  
+  forecastData = response.data.list[4];
+  forecast.innerHTML =
+  forecast.innerHTML +
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+  
+  forecastData = response.data.list[5];
+  forecast.innerHTML =
+  forecast.innerHTML +
+    `<div class="col-2">
+            <h6 class="hour">${formatHours(forecastData.dt * 1000)}</h6>
+            <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
+          </div>`;
+}
 
+//Searching engine
 function search(city) {
   let apiKey = "a899961427dc9d3ac320aeea78474c0d";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showTemperature);
 
-axios.get(apiUrl).then(showTemperature);
+  //Forecast call
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function searchInput(event) {
