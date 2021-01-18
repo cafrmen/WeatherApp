@@ -56,7 +56,7 @@ function showTemperature(response) {
 function showForecast(response) {
   let forecast = document.querySelector("#forecast");
   let forecastData = response.data.list[0]
-  console.log(forecastData);
+  //console.log(forecastData);
   forecast.innerHTML =
     `<div class="col-2">
             <img class="forecastIcon" src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png" alt="api icon">
