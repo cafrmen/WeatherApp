@@ -3,8 +3,10 @@ body {
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
   text-shadow: #154360 0 2px;
+  min-height: 100%;
   background-image: url("fondo.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card {
